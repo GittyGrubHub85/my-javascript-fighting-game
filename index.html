@@ -3,11 +3,40 @@
 <head>
 	<meta charset="utf-8">
 	<title></title>
+	<style>
+		* {
+		  box-sizing: border-box;
+		}
+	</style>
 </head>
 <body>
-<canvas>
+	<!--red container div-->
+	<div style="position: relative; display: inline-block">
+
+		<!--smaller red container div-->
+		<div style="position: absolute; display: flex; width: 100%; align-items: center; padding: 20px;">
+			<!--Player Health-->
+			<div style="position: relative; height: 30px; width: 100%; display: flex; justify-content: flex-end;">
+				<div style="background-color: yellow; width: 100%; height: 30px;"></div>
+				<div id="playerHealth" style="position: absolute; background-color: blue; top: 0; right: 0; bottom: 0; width: 100%"></div>
+			</div>
+
+			<!--Timer-->
+			<div id="timer" style="background-color: red; width: 100px; height: 100px; flex-shrink: 0; display: flex; align-items: center; justify-content: center;">10</div>
+
+			<!--Enemy Health-->
+			<div style="position: relative; height: 30px; width: 100%;">
+				<div style="background-color: yellow; height: 30px;"></div>
+				<div id="enemyHealth" style="position: absolute; background-color: blue; top: 0; right: 0; bottom: 0; left: 0;"></div>
+			</div>
+		</div>
+
+		<div id="displayText" style="position: absolute; color: white; display: none; align-items: center; justify-content: center; top: 0; right: 0; bottom: 0; left: 0;">Tie</div>
+		<canvas width="1024" height="576"></canvas>
+	</div>
+
 	
-</canvas>
-<script type="text/javascript" src='index.js'></script>
+
+	<script type="text/javascript" src='index.js'></script>
 </body>
 </html>
